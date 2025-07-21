@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "learning_rate_schedule",
+    "Title": "Adaptive Learning Rate Schedules: Comparing different learning rate schedules for diffusion models.",
+    "Experiment": "In this experiment, we compare the performance of different learning rate schedules on diffusion model performance. We use the final estimated KL as the evaluation metric.",
+    "Interestingness": 4,
+    "Feasibility": 10,
+    "Novelty": 3,
+    "novel": true
+  },
+  {
+    "Name": "geometric_positional_encodings",
+    "Title": "Geometric-Aware Positional Encodings for Low-Dimensional Diffusion Models",
+    "Experiment": "Implement and compare encoding schemes specifically designed for 2D geometric data: 1) Polar coordinate encoding (radius/angle), 2) Distance-to-cluster-centers encoding (using k-means on training data), 3) Original sinusoidal (baseline). Train each variant on all datasets, comparing: training convergence, sample quality (KL divergence), and mode coverage. Requires modifying only the embedding class while keeping network architecture fixed.",
+    "Interestingness": 9,
+    "Feasibility": 9,
+    "Novelty": 8,
+    "novel": true
+  }
+]

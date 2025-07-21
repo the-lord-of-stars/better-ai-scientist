@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "number_of_interactions",
+        "Title": "How Stability of MD Trajectory Depends on Number of Interactions Accounted in Equivariant Models.",
+        "Experiment": "In this experiment, we train MACE model on each of the 10 datasets stored in folders with the corresponding molecule names ('ethanol', 'benzene', 'uracil','naphthalene','aspirin','salicylic','malonaldehyde','toluene','paracetamol','azobenzene'), and run molecular dynamics simulaions for each of them to estimate stability of the molecule's MD trajectory via RMSF of the trajectory. Our goal is to check whether there is a overall improvement of the stability of the trajectories accross different molecules with the change of the number of interactions passed as a parameter to MACE model. We try to account to the fact that difference in validation metrics for the trained MACE models may explain the possible differences in stability of MD trajectories to some extent as well.",
+        "Interestingness": 7,
+        "Feasibility": 7,
+        "Novelty": 5
+    },
+    {
+        "Name": "cut_off_radius_and_molecule_size",
+        "Title": "Automatic Cut Off Radius for Equivariant Neural Networks",
+        "Experiment": "In this experiment, we train MACE model on each of the 10 datasets stored in folders with the corresponding molecule names ('ethanol', 'benzene', 'uracil','naphthalene','aspirin','salicylic','malonaldehyde','toluene','paracetamol','azobenzene'), and use validation mae to establish how to choose the best cutoff parameter r_max for the MACE model to be trained based on molecular size.",
+        "Interestingness": 6,
+        "Feasibility": 5,
+        "Novelty": 4
+    },
+    {
+        "Name": "equivariance_degree_impact",
+        "Title": "The Role of Equivariance Degree in Molecular Dynamics Stability",
+        "Experiment": "We will modify the experiment.py to systematically vary the max_L parameter (1-4) while keeping other parameters fixed. For each molecule dataset, we'll train MACE models with different max_L values, record validation metrics, and run MD simulations. We'll then analyze: 1) Correlation between max_L and validation MAE, 2) Relationship between max_L and RMFS stability metric, 3) Whether molecular size (from mol_size()) modulates these relationships. The analysis will reveal optimal equivariance levels for different molecule types.",
+        "Interestingness": 8,
+        "Feasibility": 8,
+        "Novelty": 7
+    },
+    {
+        "Name": "hidden_irreps_analysis",
+        "Title": "Optimal Feature Representations in Equivariant Networks for Molecular Dynamics",
+        "Experiment": "We will modify the params dictionary to test different hidden_irreps configurations: 1) Pure scalar ('128x0e'), 2) Scalar-vector mix ('128x0e + 128x1o'), 3) Higher-order mix ('64x0e + 64x1o + 64x2e'). For each of the 10 molecules, we'll train MACE models with these configurations while fixing other parameters (r_max=5.0, num_interactions=2, max_L=1). After training, we'll: 1) Compare validation MAE across configurations, 2) Run MD simulations and compute RMFS stability metrics, 3) Analyze correlations between representation complexity (from hidden_irreps), molecular size (from mol_size()), and MD stability. Results will indicate whether certain feature combinations generalize better across molecular systems.",
+        "Interestingness": 8,
+        "Feasibility": 9,
+        "Novelty": 7
+    }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "optimizer_grokking",
+    "Title": "Investigating the Impact of Optimization Algorithms on Grokking in Neural Networks",
+    "Experiment": "Modify the training function to allow for the selection of three different optimization algorithms (SGD, Adam with weight decay, RMSProp with weight decay). Evaluate each optimizer across the same dataset, recording the validation accuracy and the number of epochs taken to reach a defined accuracy threshold (e.g., 95%). Repeat the experiments across multiple datasets to assess generalizability, analyzing results to determine which optimizer leads to faster grokking and better generalization performance.",
+    "Interestingness": 9,
+    "Feasibility": 8,
+    "Novelty": 8,
+    "novel": true
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "rotational_symmetry_impact",
+    "Title": "Investigating the Impact of Rotational Symmetry Handling (max_L) on Molecular Property Prediction and Dynamics",
+    "Experiment": "We will modify the experiment to systematically vary the max_L parameter (from 0 to 3) while keeping other parameters constant. For each molecule in our dataset, we'll train MACE models with different max_L values and compare their training metrics (loss, validation error) and MD simulation results (RMFS, molecular size). The key modification needed is to adjust the params dictionary to include different max_L values while keeping other parameters fixed. We'll analyze whether higher max_L values consistently improve results or if there's an optimal level of symmetry handling that depends on molecular complexity.",
+    "Interestingness": 8,
+    "Feasibility": 9,
+    "Novelty": 7,
+    "novel": true
+  },
+  {
+    "Name": "cutoff_radius_impact",
+    "Title": "Optimizing Spatial Context: How Cutoff Radius (r_max) Affects Model Performance Across Molecular Sizes",
+    "Experiment": "We will modify the experiment to systematically vary the r_max parameter (testing values like 3.0, 5.0, 7.0, 10.0) while keeping other parameters constant. For each molecule in our dataset, we'll train MACE models with different r_max values and record both training metrics and MD simulation results. We'll then analyze the relationship between optimal r_max values and molecular size (calculated via mol_size function). The key modification is adjusting the params dictionary to include different r_max values. We expect to find that larger molecules benefit from larger r_max values, while smaller molecules might perform best with smaller cutoffs.",
+    "Interestingness": 8,
+    "Feasibility": 9,
+    "Novelty": 7,
+    "novel": false
+  }
+]
